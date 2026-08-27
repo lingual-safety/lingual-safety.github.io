@@ -17,6 +17,7 @@ const CONFIG = {
   conferenceLocation: "Guwahati, India",
 
   // External links
+  codalabURL: "https://www.codabench.org/competitions/17783/",
   codabenchURL: "https://www.codabench.org/competitions/17783/",
   githubURL: "TODO",
   baselineURL: "TODO",

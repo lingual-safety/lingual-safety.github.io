@@ -54,14 +54,13 @@
 
     <!-- Desktop links -->
     <ul class="nav-links" role="list">
-      <li><a href="#about"      class="nav-link" data-section-target="about">Task</a></li>
-      <li><a href="#dataset"    class="nav-link" data-section-target="dataset">Dataset</a></li>
-      <li><a href="#tracks"     class="nav-link" data-section-target="tracks">Tracks</a></li>
-      <li><a href="#evaluation" class="nav-link" data-section-target="evaluation">Evaluation</a></li>
-      <li><a href="#submission" class="nav-link" data-section-target="submission">Submission</a></li>
-      <li><a href="#dates"      class="nav-link" data-section-target="dates">Dates</a></li>
-      <li><a href="#resources"  class="nav-link" data-section-target="resources">Resources</a></li>
-      <li><a href="#organizers" class="nav-link" data-section-target="organizers">Organizers</a></li>
+      <li><a href="#about"       class="nav-link" data-section-target="about">Task</a></li>
+      <li><a href="#dataset"     class="nav-link" data-section-target="dataset">Dataset</a></li>
+      <li><a href="#evaluation"  class="nav-link" data-section-target="evaluation">Evaluation</a></li>
+      <li><a href="#dates"       class="nav-link" data-section-target="dates">Important Dates</a></li>
+      <li><a href="#submission"  class="nav-link" data-section-target="submission">Submission</a></li>
+      <li><a href="#leaderboard" class="nav-link" data-section-target="leaderboard">Leaderboard</a></li>
+      <li><a href="#organizers"  class="nav-link" data-section-target="organizers">Organizers</a></li>
     </ul>
 
     <!-- Desktop CTA -->
@@ -88,14 +87,13 @@
 
 <!-- Mobile drawer -->
 <div id="nav-mobile" class="nav-mobile" role="menu" aria-label="Mobile navigation">
-  <a href="#about"      class="nav-link" role="menuitem">Task</a>
-  <a href="#dataset"    class="nav-link" role="menuitem">Dataset</a>
-  <a href="#tracks"     class="nav-link" role="menuitem">Tracks</a>
-  <a href="#evaluation" class="nav-link" role="menuitem">Evaluation</a>
-  <a href="#submission" class="nav-link" role="menuitem">Submission</a>
-  <a href="#dates"      class="nav-link" role="menuitem">Dates</a>
-  <a href="#resources"  class="nav-link" role="menuitem">Resources</a>
-  <a href="#organizers" class="nav-link" role="menuitem">Organizers</a>
+  <a href="#about"       class="nav-link" role="menuitem">Task</a>
+  <a href="#dataset"     class="nav-link" role="menuitem">Dataset</a>
+  <a href="#evaluation"  class="nav-link" role="menuitem">Evaluation</a>
+  <a href="#dates"       class="nav-link" role="menuitem">Important Dates</a>
+  <a href="#submission"  class="nav-link" role="menuitem">Submission</a>
+  <a href="#leaderboard" class="nav-link" role="menuitem">Leaderboard</a>
+  <a href="#organizers"  class="nav-link" role="menuitem">Organizers</a>
   <a href="#" data-link="codalab" class="btn btn--primary" role="menuitem" target="_blank" rel="noopener noreferrer">
     Participate on CodaLab
   </a>
@@ -117,7 +115,7 @@
     <div class="hero-inner">
 
       <h1 id="hero-title" class="hero-title">
-        <span class="gradient-text">LingualSafety</span> 1.0
+        <span class="title-accent">Lingual</span><span class="title-rest">Safety 1.0</span>
       </h1>
 
       <p class="hero-subtitle">
@@ -193,7 +191,7 @@
 </section>
 
 
-<!-- ============================================================
+<<!-- ============================================================
      ABOUT / TASK DESCRIPTION
      ============================================================ -->
 <section id="about" class="section" aria-labelledby="about-title">
@@ -263,140 +261,9 @@
 
 
 <!-- ============================================================
-     DATASET - Languages, Attack Settings, Safety Categories
-     ============================================================ -->
-<section id="dataset" class="section section--alt" aria-labelledby="dataset-title">
-  <div class="container">
-
-    <header class="section-header">
-      <span class="section-label">Dataset</span>
-      <h2 id="dataset-title" class="section-title">Languages &amp; Coverage</h2>
-      <p class="section-subtitle">
-        The benchmark spans five languages, six persuasion techniques,
-        and thirteen safety categories.
-      </p>
-    </header>
-
-    <!-- Languages -->
-    <div class="section-header" style="margin-bottom:2rem;">
-      <h3 class="section-title" style="font-size:1.5rem;">Supported Languages</h3>
-    </div>
-    <div class="languages-grid reveal" style="margin-bottom:var(--space-4xl);">
-
-      <div class="lang-card">
-        <div class="lang-name">English</div>
-        <div class="lang-native">English</div>
-      </div>
-
-      <div class="lang-card">
-        <div class="lang-name">Hindi</div>
-        <div class="lang-native">हिन्दी</div>
-      </div>
-
-      <div class="lang-card">
-        <div class="lang-name">Bengali</div>
-        <div class="lang-native">বাংলা</div>
-      </div>
-
-      <div class="lang-card">
-        <div class="lang-name">Marathi</div>
-        <div class="lang-native">मराठी</div>
-      </div>
-
-      <div class="lang-card">
-        <div class="lang-name">Punjabi</div>
-        <div class="lang-native">ਪੰਜਾਬੀ</div>
-      </div>
-
-    </div><!-- /.languages-grid -->
-
-    <!-- Attack Settings -->
-    <div class="section-header" style="margin-bottom:2rem;">
-      <h3 class="section-title" style="font-size:1.5rem;">Attack Settings</h3>
-      <p class="section-subtitle">
-        Systems are evaluated separately on both settings to determine whether
-        defences against direct harmful requests also generalise to strategically
-        framed attacks.
-      </p>
-    </div>
-    <div class="attacks-grid reveal" style="margin-bottom:var(--space-4xl);">
-
-      <div class="attack-card plain">
-
-        <h3>Plain Harmful Prompts</h3>
-        <p>
-          Prompts that directly and explicitly express harmful intent without
-          any additional framing, context, or rhetorical strategy. These represent
-          the most straightforward form of policy-violating requests.
-        </p>
-        <p style="font-size:0.875rem;color:var(--clr-text-3);">
-          Systems are expected to refuse these requests clearly and consistently
-          across all five supported languages.
-        </p>
-      </div>
-
-      <div class="attack-card persuasion">
-
-        <h3>Persuasion-Based Jailbreak Prompts</h3>
-        <p>
-          Prompts that embed the same harmful intent within persuasive strategies
-          designed to make the request appear more acceptable, legitimate, or
-          reasonable to the model.
-        </p>
-        <p>Logical Appeal, Authority Endorsement, Anchoring, Priming, Misrepresentation, and Confirmation Bias.</p>
-      </div>
-
-    </div><!-- /.attacks-grid -->
-
-    <!-- Persuasion Techniques -->
-    <div class="section-header" style="margin-bottom:2rem;">
-      <h3 class="section-title" style="font-size:1.5rem;">Persuasion Techniques</h3>
-      <p class="section-subtitle">
-        Six distinct persuasion strategies used to construct jailbreak prompts
-        in the benchmark.
-      </p>
-    </div>
-    <div class="techniques-list reveal" style="margin-bottom:var(--space-3xl);">
-      <div class="technique-row"><span class="technique-label">Logical Appeal</span><span class="technique-desc">Framing a harmful request using apparently rational arguments or logical justifications to make the underlying intent seem reasonable.</span></div>
-      <div class="technique-row"><span class="technique-label">Authority Endorsement</span><span class="technique-desc">Invoking the name or approval of an authority figure, institution, or expert to lend perceived legitimacy to a harmful request.</span></div>
-      <div class="technique-row"><span class="technique-label">Anchoring</span><span class="technique-desc">Introducing a reference point or initial context that steers the model's interpretation toward complying with an embedded harmful request.</span></div>
-      <div class="technique-row"><span class="technique-label">Priming</span><span class="technique-desc">Preceding the harmful request with content that biases the model's state or context in a direction favourable to producing a policy-violating response.</span></div>
-      <div class="technique-row"><span class="technique-label">Misrepresentation</span><span class="technique-desc">Deliberately describing a harmful request in misleading terms - for example, framing it as fictional, hypothetical, educational, or benign - to bypass safety checks.</span></div>
-      <div class="technique-row"><span class="technique-label">Confirmation Bias</span><span class="technique-desc">Exploiting the tendency to favour information that confirms existing assumptions, by framing requests to align with beliefs the model is assumed to hold.</span></div>
-    </div><!-- /.techniques-list -->
-
-    <!-- Safety Categories -->
-    <div class="section-header" style="margin-bottom:2rem;">
-      <h3 class="section-title" style="font-size:1.5rem;">Safety Categories</h3>
-      <p class="section-subtitle">
-        Thirteen safety categories covering the policy-relevant risk areas evaluated
-        in the benchmark.
-      </p>
-    </div>
-    <ul class="categories-list reveal">
-      <li>Illegal Activity</li>
-      <li>Malware</li>
-      <li>Fraud</li>
-      <li>Hate Speech</li>
-      <li>Privacy Violations</li>
-      <li>Political Lobbying</li>
-      <li>Financial Advice</li>
-      <li>Government Decision Making</li>
-      <li>Physical Harm</li>
-      <li>Economic Harm</li>
-      <li>Copyright</li>
-      <li>Misinformation</li>
-      <li>Chemical &amp; Bioweapon</li>
-    </ul><!-- /.categories-list -->
-
-  </div><!-- /.container -->
-</section>
-
-
-<!-- ============================================================
      TASK OBJECTIVE
      ============================================================ -->
-<section id="objective" class="section" aria-labelledby="objective-title">
+<section id="objective" class="section section--alt" aria-labelledby="objective-title">
   <div class="container">
 
     <header class="section-header">
@@ -461,7 +328,7 @@
 <!-- ============================================================
      TRACKS
      ============================================================ -->
-<section id="tracks" class="section section--alt" aria-labelledby="tracks-title">
+<section id="tracks" class="section" aria-labelledby="tracks-title">
   <div class="container">
 
     <header class="section-header">
@@ -539,9 +406,184 @@
 
 
 <!-- ============================================================
+     DATASET - Languages, Attack Settings, Safety Categories
+     ============================================================ -->
+<section id="dataset" class="section section--alt" aria-labelledby="dataset-title">
+  <div class="container">
+
+    <header class="section-header">
+      <span class="section-label">Dataset</span>
+      <h2 id="dataset-title" class="section-title">Languages &amp; Coverage</h2>
+      <p class="section-subtitle">
+        The benchmark spans five languages, six persuasion techniques,
+        and thirteen safety categories.
+      </p>
+    </header>
+
+    <!-- Languages -->
+    <div class="section-header" style="margin-bottom:2rem;">
+      <h3 class="section-title" style="font-size:1.5rem;">Supported Languages</h3>
+    </div>
+    <div class="languages-grid reveal" style="margin-bottom:var(--space-4xl);">
+
+      <div class="lang-card">
+        <div class="lang-name">English</div>
+        <div class="lang-native">English</div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-name">Hindi</div>
+        <div class="lang-native">हिन्दी</div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-name">Bengali</div>
+        <div class="lang-native">বাংলা</div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-name">Marathi</div>
+        <div class="lang-native">मराठी</div>
+      </div>
+
+      <div class="lang-card">
+        <div class="lang-name">Punjabi</div>
+        <div class="lang-native">ਪੰਜਾਬੀ</div>
+      </div>
+
+    </div><!-- /.languages-grid -->
+
+    <!-- Attack Settings -->
+    <div class="section-header" style="margin-bottom:2rem;">
+      <h3 class="section-title" style="font-size:1.5rem;">Attack Settings</h3>
+      <p class="section-subtitle">
+        Systems are evaluated separately on both settings to determine whether
+        defences against direct harmful requests also generalise to strategically
+        framed attacks.
+      </p>
+    </div>
+    <div class="attacks-grid reveal" style="margin-bottom:var(--space-4xl);">
+
+      <div class="attack-card plain">
+        <h3>Plain Harmful Prompts</h3>
+        <p>
+          Prompts that directly and explicitly express harmful intent without
+          any additional framing, context, or rhetorical strategy. These represent
+          the most straightforward form of policy-violating requests.
+        </p>
+        <p style="font-size:0.875rem;color:var(--clr-text-3);">
+          Systems are expected to refuse these requests clearly and consistently
+          across all five supported languages.
+        </p>
+      </div>
+
+      <div class="attack-card persuasion">
+        <h3>Persuasion-Based Jailbreak Prompts</h3>
+        <p>
+          Prompts that embed the same harmful intent within persuasive strategies
+          designed to make the request appear more acceptable, legitimate, or
+          reasonable to the model.
+        </p>
+        <p>Logical Appeal, Authority Endorsement, Anchoring, Priming, Misrepresentation, and Confirmation Bias.</p>
+      </div>
+
+    </div><!-- /.attacks-grid -->
+
+    <!-- Persuasion Techniques -->
+    <div class="section-header" style="margin-bottom:2rem;">
+      <h3 class="section-title" style="font-size:1.5rem;">Persuasion Techniques</h3>
+      <p class="section-subtitle">
+        Six distinct persuasion strategies used to construct jailbreak prompts
+        in the benchmark.
+      </p>
+    </div>
+    <div class="techniques-list reveal" style="margin-bottom:var(--space-3xl);">
+      <div class="technique-row"><span class="technique-label">Logical Appeal</span><span class="technique-desc">Framing a harmful request using apparently rational arguments or logical justifications to make the underlying intent seem reasonable.</span></div>
+      <div class="technique-row"><span class="technique-label">Authority Endorsement</span><span class="technique-desc">Invoking the name or approval of an authority figure, institution, or expert to lend perceived legitimacy to a harmful request.</span></div>
+      <div class="technique-row"><span class="technique-label">Anchoring</span><span class="technique-desc">Introducing a reference point or initial context that steers the model's interpretation toward complying with an embedded harmful request.</span></div>
+      <div class="technique-row"><span class="technique-label">Priming</span><span class="technique-desc">Preceding the harmful request with content that biases the model's state or context in a direction favourable to producing a policy-violating response.</span></div>
+      <div class="technique-row"><span class="technique-label">Misrepresentation</span><span class="technique-desc">Deliberately describing a harmful request in misleading terms - for example, framing it as fictional, hypothetical, educational, or benign - to bypass safety checks.</span></div>
+      <div class="technique-row"><span class="technique-label">Confirmation Bias</span><span class="technique-desc">Exploiting the tendency to favour information that confirms existing assumptions, by framing requests to align with beliefs the model is assumed to hold.</span></div>
+    </div><!-- /.techniques-list -->
+
+    <!-- Safety Categories -->
+    <div class="section-header" style="margin-bottom:2rem;">
+      <h3 class="section-title" style="font-size:1.5rem;">Safety Categories</h3>
+      <p class="section-subtitle">
+        Thirteen safety categories covering the policy-relevant risk areas evaluated
+        in the benchmark.
+      </p>
+    </div>
+    <ul class="categories-list reveal">
+      <li>Illegal Activity</li>
+      <li>Malware</li>
+      <li>Fraud</li>
+      <li>Hate Speech</li>
+      <li>Privacy Violations</li>
+      <li>Political Lobbying</li>
+      <li>Financial Advice</li>
+      <li>Government Decision Making</li>
+      <li>Physical Harm</li>
+      <li>Economic Harm</li>
+      <li>Copyright</li>
+      <li>Misinformation</li>
+      <li>Chemical &amp; Bioweapon</li>
+    </ul><!-- /.categories-list -->
+
+  </div><!-- /.container -->
+</section>
+
+
+<!-- ============================================================
+     RESOURCES - Open-Source LLMs
+     ============================================================ -->
+<section id="resources" class="section" aria-labelledby="resources-title">
+  <div class="container">
+
+    <header class="section-header">
+      <span class="section-label">Resources</span>
+      <h2 id="resources-title" class="section-title">Supported Open-Source LLMs</h2>
+      <p class="section-subtitle">
+        Participants are expected to work with the following open-source LLMs
+        as specified by the task organizers. Click a model name to view its page.
+      </p>
+    </header>
+
+    <div class="models-list reveal">
+      <a class="model-list-row" href="https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct" target="_blank" rel="noopener noreferrer">
+        <span class="model-list-name">Llama-3.1-8B-Instruct</span>
+        <span class="model-list-org">Meta AI</span>
+      </a>
+      <a class="model-list-row" href="https://huggingface.co/Qwen/Qwen3-4B" target="_blank" rel="noopener noreferrer">
+        <span class="model-list-name">Qwen3-4B</span>
+        <span class="model-list-org">Alibaba Cloud / Qwen Team</span>
+      </a>
+      <a class="model-list-row" href="https://huggingface.co/google/gemma-3-4b-it" target="_blank" rel="noopener noreferrer">
+        <span class="model-list-name">Gemma-3-4B-IT</span>
+        <span class="model-list-org">Google DeepMind</span>
+      </a>
+      <a class="model-list-row" href="https://huggingface.co/sarvamai/sarvam-1" target="_blank" rel="noopener noreferrer">
+        <span class="model-list-name">Sarvam-1</span>
+        <span class="model-list-org">Sarvam AI</span>
+      </a>
+      <a class="model-list-row" href="https://huggingface.co/krutrim-ai-labs/Krutrim-1-instruct" target="_blank" rel="noopener noreferrer">
+        <span class="model-list-name">Krutrim-1-Instruct</span>
+        <span class="model-list-org">Krutrim AI Labs</span>
+      </a>
+      <a class="model-list-row" href="https://huggingface.co/bharatgenai/Param-1" target="_blank" rel="noopener noreferrer">
+        <span class="model-list-name">Param-1</span>
+        <span class="model-list-org">BharatGenAI</span>
+      </a>
+    </div><!-- /.models-list -->
+
+  </div><!-- /.container -->
+</section>
+
+
+<!-- ============================================================
      EVALUATION
      ============================================================ -->
-<section id="evaluation" class="section" aria-labelledby="evaluation-title">
+<section id="evaluation" class="section section--alt" aria-labelledby="evaluation-title">
   <div class="container">
 
     <header class="section-header">
@@ -657,110 +699,6 @@
 
 
 <!-- ============================================================
-     LEADERBOARD
-     ============================================================ -->
-<section id="leaderboard" class="section section--alt" aria-labelledby="leaderboard-title">
-  <div class="container">
-
-    <header class="section-header">
-      <span class="section-label">Leaderboard</span>
-      <h2 id="leaderboard-title" class="section-title">Official Results</h2>
-      <p class="section-subtitle">
-        Ranked by Composite Safety Score (CSS). Higher CSS indicates a more
-        effective and robust defence system.
-      </p>
-    </header>
-
-    <!-- Future table - hidden until data is available -->
-    <div id="leaderboard-table-wrap" aria-label="Leaderboard table">
-      <table id="leaderboard-table">
-        <thead>
-          <tr>
-            <th scope="col">Rank</th>
-            <th scope="col">Team</th>
-            <th scope="col">Track</th>
-            <th scope="col">CSS ↑</th>
-            <th scope="col">ASR ↓</th>
-            <th scope="col">SRR ↑</th>
-          </tr>
-        </thead>
-        <tbody id="leaderboard-tbody">
-          <!-- Rows injected by JS when data available -->
-        </tbody>
-      </table>
-    </div>
-
-    <!-- Placeholder shown until leaderboard goes live -->
-    <div class="leaderboard-coming reveal" aria-live="polite">
-      <div class="lb-icon" aria-hidden="true">🏆</div>
-      <h3>Official leaderboard - Coming soon</h3>
-      <p>
-        Results will be published here after the evaluation phase is complete.
-        Rankings are determined by the Composite Safety Score (CSS).
-      </p>
-    </div>
-
-  </div><!-- /.container -->
-</section>
-
-
-<!-- ============================================================
-     SUBMISSION
-     ============================================================ -->
-<section id="submission" class="section" aria-labelledby="submission-title">
-  <div class="container">
-
-    <header class="section-header">
-      <span class="section-label">Submission</span>
-      <h2 id="submission-title" class="section-title">How to Submit</h2>
-      <p class="section-subtitle">
-        The task uses an online competition platform for system submissions and
-        automated evaluation. Registration and submission details will be announced.
-      </p>
-    </header>
-
-    <div class="submission-grid reveal">
-
-      <!-- Main submission info -->
-      <div class="submission-main">
-        <h3>CodaLab Competition</h3>
-        <p>
-          Submissions are managed through the official CodaLab competition page.
-          Create an account on CodaLab and register for the competition to
-          access submission instructions, evaluation details, and the leaderboard.
-        </p>
-        <a href="#" data-link="codalab" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">
-          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          Open CodaLab Page
-        </a>
-      </div>
-
-      <!-- Baseline -->
-      <div>
-        <h3 class="section-title" style="font-size:1.25rem;margin-bottom:var(--space-lg);">Baseline System</h3>
-        <div class="baseline-card">
-          <div class="baseline-info">
-            <h3>Baseline - Coming Soon</h3>
-            <p>
-              A baseline system with essential implementation details will be
-              made available through a GitHub repository before the competition
-              evaluation phase begins.
-            </p>
-            <a href="#" data-link="baseline" class="btn btn--outline" target="_blank" rel="noopener noreferrer">
-              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              View on GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- /.submission-grid -->
-
-  </div><!-- /.container -->
-</section>
-
-
-<!-- ============================================================
      IMPORTANT DATES
      ============================================================ -->
 <section id="dates" class="section" aria-labelledby="dates-title">
@@ -817,46 +755,140 @@
 
 
 <!-- ============================================================
-     RESOURCES - Open-Source LLMs
+     SUBMISSION
      ============================================================ -->
-<section id="resources" class="section section--alt" aria-labelledby="resources-title">
+<section id="submission" class="section section--alt" aria-labelledby="submission-title">
   <div class="container">
 
     <header class="section-header">
-      <span class="section-label">Resources</span>
-      <h2 id="resources-title" class="section-title">Supported Open-Source LLMs</h2>
+      <span class="section-label">Submission</span>
+      <h2 id="submission-title" class="section-title">How to Submit</h2>
       <p class="section-subtitle">
-        Participants are expected to work with the following open-source LLMs
-        as specified by the task organizers. Click a model name to view its page.
+        The task uses an online competition platform for system submissions and
+        automated evaluation. Registration and submission details will be announced.
       </p>
     </header>
 
-    <div class="models-list reveal">
-      <a class="model-list-row" href="https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct" target="_blank" rel="noopener noreferrer">
-        <span class="model-list-name">Llama-3.1-8B-Instruct</span>
-        <span class="model-list-org">Meta AI</span>
-      </a>
-      <a class="model-list-row" href="https://huggingface.co/Qwen/Qwen3-4B" target="_blank" rel="noopener noreferrer">
-        <span class="model-list-name">Qwen3-4B</span>
-        <span class="model-list-org">Alibaba Cloud / Qwen Team</span>
-      </a>
-      <a class="model-list-row" href="https://huggingface.co/google/gemma-3-4b-it" target="_blank" rel="noopener noreferrer">
-        <span class="model-list-name">Gemma-3-4B-IT</span>
-        <span class="model-list-org">Google DeepMind</span>
-      </a>
-      <a class="model-list-row" href="https://huggingface.co/sarvamai/sarvam-1" target="_blank" rel="noopener noreferrer">
-        <span class="model-list-name">Sarvam-1</span>
-        <span class="model-list-org">Sarvam AI</span>
-      </a>
-      <a class="model-list-row" href="https://huggingface.co/krutrim-ai-labs/Krutrim-1-instruct" target="_blank" rel="noopener noreferrer">
-        <span class="model-list-name">Krutrim-1-Instruct</span>
-        <span class="model-list-org">Krutrim AI Labs</span>
-      </a>
-      <a class="model-list-row" href="https://huggingface.co/bharatgenai/Param-1" target="_blank" rel="noopener noreferrer">
-        <span class="model-list-name">Param-1</span>
-        <span class="model-list-org">BharatGenAI</span>
-      </a>
-    </div><!-- /.models-list -->
+    <div class="submission-grid reveal">
+
+      <!-- Main submission info -->
+      <div class="submission-main">
+        <h3>CodaLab Competition</h3>
+        <p>
+          Submissions are managed through the official CodaLab competition page.
+          Create an account on CodaLab and register for the competition to
+          access submission instructions, evaluation details, and the leaderboard.
+        </p>
+        <a href="#" data-link="codalab" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Open CodaLab Page
+        </a>
+      </div>
+
+      <!-- Baseline -->
+      <div>
+        <h3 class="section-title" style="font-size:1.25rem;margin-bottom:var(--space-lg);">Baseline System</h3>
+        <div class="baseline-card">
+          <div class="baseline-info">
+            <h3>Baseline - Coming Soon</h3>
+            <p>
+              A baseline system with essential implementation details will be
+              made available through a GitHub repository before the competition
+              evaluation phase begins.
+            </p>
+            <a href="#" data-link="baseline" class="btn btn--outline" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.submission-grid -->
+
+  </div><!-- /.container -->
+</section>
+
+
+<!-- ============================================================
+     LEADERBOARD
+     ============================================================ -->
+<section id="leaderboard" class="section" aria-labelledby="leaderboard-title">
+  <div class="container">
+
+    <header class="section-header">
+      <span class="section-label">Leaderboard</span>
+      <h2 id="leaderboard-title" class="section-title">Official Results</h2>
+      <p class="section-subtitle">
+        Ranked by Composite Safety Score (CSS). Higher CSS indicates a more
+        effective and robust defence system.
+      </p>
+    </header>
+
+    <!-- Future table - hidden until data is available -->
+    <div id="leaderboard-table-wrap" aria-label="Leaderboard table">
+      <table id="leaderboard-table">
+        <thead>
+          <tr>
+            <th scope="col">Rank</th>
+            <th scope="col">Team</th>
+            <th scope="col">Track</th>
+            <th scope="col">CSS ↑</th>
+            <th scope="col">ASR ↓</th>
+            <th scope="col">SRR ↑</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard-tbody">
+          <!-- Rows injected by JS when data available -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Placeholder shown until leaderboard goes live -->
+    <div class="leaderboard-coming reveal" aria-live="polite">
+      <div class="lb-icon" aria-hidden="true">🏆</div>
+      <h3>Official leaderboard - Coming soon</h3>
+      <p>
+        Results will be published here after the evaluation phase is complete.
+        Rankings are determined by the Composite Safety Score (CSS).
+      </p>
+    </div>
+
+  </div><!-- /.container -->
+</section>
+
+
+<!-- ============================================================
+     CONFERENCE CONTEXT
+     ============================================================ -->
+<section id="conference" class="section section--alt" aria-labelledby="conference-title">
+  <div class="container">
+
+    <header class="section-header">
+      <span class="section-label">Conference</span>
+      <h2 id="conference-title" class="section-title">Hosted at ICON 2026</h2>
+    </header>
+
+    <div class="conference-card reveal">
+      <div class="conf-info">
+        <h3>
+          <a href="#" data-link="icon" target="_blank" rel="noopener noreferrer">
+            ICON 2026
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </h3>
+        <p class="conf-location">
+          <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:-2px;margin-right:4px;"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+          Guwahati, India
+        </p>
+        <p>
+          LingualSafety 1.0 is proposed as a shared-task event at ICON 2026, intended as a
+          major NLP event bringing together researchers and faculty from leading Indian and
+          international institutions. The shared task is planned as a half-day event.
+          Further conference details will be announced by the ICON 2026 organizing committee.
+        </p>
+      </div>
+    </div>
 
   </div><!-- /.container -->
 </section>
@@ -865,7 +897,7 @@
 <!-- ============================================================
      ORGANIZERS
      ============================================================ -->
-<section id="organizers" class="section section--alt" aria-labelledby="organizers-title">
+<section id="organizers" class="section" aria-labelledby="organizers-title">
   <div class="container">
 
     <header class="section-header">
@@ -887,42 +919,6 @@
         <span class="organizer-row-affiliation">Associate Professor, IIT Patna</span>
       </div>
     </div><!-- /.organizers-list -->
-
-  </div><!-- /.container -->
-</section>
-
-
-<!-- ============================================================
-     CONFERENCE CONTEXT
-     ============================================================ -->
-<section id="conference" class="section" aria-labelledby="conference-title">
-  <div class="container">
-
-    <header class="section-header">
-      <span class="section-label">Conference</span>
-      <h2 id="conference-title" class="section-title">Hosted at ICON 2026</h2>
-    </header>
-
-    <div class="conference-card reveal">
-      <div class="conf-icon" aria-hidden="true">🏛️</div>
-      <div class="conf-info">
-        <h3>ICON 2026</h3>
-        <p class="conf-location">
-          <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline;vertical-align:-2px;margin-right:4px;"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
-          Guwahati, India
-        </p>
-        <p>
-          LingualSafety 1.0 is proposed as a shared-task event at ICON 2026, intended as a
-          major NLP event bringing together researchers and faculty from leading Indian and
-          international institutions. The shared task is planned as a half-day event.
-          Further conference details will be announced by the ICON 2026 organizing committee.
-        </p>
-        <a href="#" data-link="icon" class="btn btn--outline" style="margin-top:var(--space-lg);" target="_blank" rel="noopener noreferrer">
-          ICON 2026 Website
-          <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-        </a>
-      </div>
-    </div>
 
   </div><!-- /.container -->
 </section>

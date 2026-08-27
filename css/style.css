@@ -359,8 +359,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   letter-spacing: -0.02em;
   margin-bottom: var(--space-lg);
 }
-.hero-title .gradient-text {
+.hero-title .title-accent {
   color: var(--clr-primary);
+}
+.hero-title .title-rest {
+  color: var(--clr-text-1);
 }
 
 .hero-subtitle {
@@ -1170,11 +1173,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   flex-shrink: 0;
   line-height: 1;
 }
-.conf-info h3 {
-  font-size: 1.5rem;
-  font-weight: 800;
+.conf-info h3 a {
   color: var(--clr-text-1);
-  margin-bottom: var(--space-xs);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  transition: color var(--transition);
+}
+.conf-info h3 a:hover {
+  color: var(--clr-primary);
+  text-decoration: underline;
 }
 .conf-info .conf-location {
   font-size: 1rem;

@@ -22,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  setLinks('[data-link="codabench"]', C.codabenchURL, 'CodaBench');
+  setLinks('[data-link="codalab"]', C.codalabURL || C.codabenchURL, 'CodaLab');
+  setLinks('[data-link="codabench"]', C.codalabURL || C.codabenchURL, 'CodaLab');
   setLinks('[data-link="github"]', C.githubURL, 'GitHub');
   setLinks('[data-link="baseline"]', C.baselineURL, 'Baseline');
   setLinks('[data-link="dataset"]', C.datasetURL, 'Dataset');
