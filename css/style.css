@@ -1367,26 +1367,63 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 @media (max-width: 768px) {
-  :root { --space-4xl: 4rem; }
-  .container { padding: 0 var(--space-lg); }
+  :root { 
+    --space-4xl: 3rem; 
+    --space-3xl: 2.5rem;
+    --space-2xl: 2rem;
+  }
+  .container { padding: 0 var(--space-md); }
+  .hero-title { font-size: 2.25rem; }
+  .hero-subtitle { font-size: 1.125rem; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
-  .languages-grid { grid-template-columns: repeat(2, 1fr); }
+  .languages-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
   .attacks-grid { grid-template-columns: 1fr; }
   .techniques-grid { grid-template-columns: 1fr; }
+  .technique-row { flex-direction: column; gap: var(--space-xs); }
+  .technique-label { min-width: unset; }
+  .organizer-row { flex-direction: column; gap: 2px; align-items: flex-start; }
   .tracks-grid { grid-template-columns: 1fr; }
   .models-grid { grid-template-columns: 1fr; }
+  .categories-list { columns: 1; }
   .categories-grid { grid-template-columns: 1fr 1fr; }
-  .footer-top { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; gap: var(--space-2xl); }
   .footer-bottom { flex-direction: column; text-align: center; }
-  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .hero-actions { flex-direction: column; align-items: stretch; width: 100%; }
+  .hero-actions .btn { justify-content: center; width: 100%; }
   .objective-highlights-grid { grid-template-columns: 1fr; }
   .organizers-grid { grid-template-columns: 1fr; }
+  .dates-table { width: 100%; }
+  .dates-event { width: 55%; font-size: 0.875rem; }
+  .dates-date { font-size: 0.8125rem; }
 }
 
 @media (max-width: 480px) {
-  .languages-grid { grid-template-columns: repeat(2, 1fr); }
-  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .hero-title { font-size: 1.85rem; }
+  .languages-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr; }
   .categories-grid { grid-template-columns: 1fr; }
+  .dates-table, .dates-table tbody, .dates-table tr, .dates-table td {
+    display: block;
+    width: 100%;
+  }
+  .dates-table tr {
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--clr-border);
+  }
+  .dates-event {
+    padding: 0 0 2px 0;
+    font-size: 0.9rem;
+  }
+  .dates-date {
+    padding: 0;
+    text-align: left;
+    font-size: 0.8125rem;
+  }
+  .model-list-row {
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-start;
+  }
 }
 
 /* -- Intersection observer reveal */
