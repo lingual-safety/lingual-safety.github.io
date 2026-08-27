@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" fill="#0d1117"/>
+  <!-- Shield body -->
+  <path d="M32 8 L50 15 L50 32 C50 44 32 56 32 56 C32 56 14 44 14 32 L14 15 Z"
+        fill="none" stroke="#4f8ef7" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Inner glow shield -->
+  <path d="M32 14 L46 20 L46 32 C46 41 32 50 32 50 C32 50 18 41 18 32 L18 20 Z"
+        fill="rgba(79,142,247,0.12)"/>
+  <!-- L letter stylised -->
+  <text x="25" y="38" font-family="Inter, system-ui, sans-serif"
+        font-weight="800" font-size="18" fill="#4f8ef7" letter-spacing="-1">L</text>
+  <!-- Dot accent -->
+  <circle cx="43" cy="22" r="3" fill="#7c6af7" opacity="0.9"/>
+</svg>
