@@ -31,27 +31,62 @@ document.addEventListener('DOMContentLoaded', () => {
   setLinks('[data-link="contact"]', C.contactEmail ? `mailto:${C.contactEmail}` : '#', 'Contact');
   setLinks('[data-link="registration"]', C.registrationURL, 'Registration');
 
-  // Populate dates
-  const dateMapping = {
-    'date-registration-open':   C.dates.registrationOpen,
-    'date-training-release':    C.dates.trainingDataRelease,
-    'date-dev-start':           C.dates.developmentPhaseStart,
-    'date-dev-end':             C.dates.developmentPhaseEnd,
-    'date-submission':          C.dates.submissionDeadline,
-    'date-results':             C.dates.resultsLeaderboard,
-    'date-paper':               C.dates.systemPaperDeadline,
-    'date-conference':          C.dates.conference,
-  };
-  Object.entries(dateMapping).forEach(([id, val]) => {
-    const el = document.getElementById(id);
-    if (el) el.textContent = val || 'To be announced';
-  });
+  // Populate timeline dynamically from CONFIG.timelineEvents
+  function renderTimeline() {
+    const container = document.getElementById('timeline-events-list');
+    if (!container || !C.timelineEvents || !Array.isArray(C.timelineEvents)) return;
+
+    // Determine current date in YYYY-MM-DD format (local time)
+    const now = new Date();
+    const todayStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+
+    // Find the current/upcoming milestone index
+    // The active event is the earliest event with date >= todayStr, or the last event if all are past
+    let activeIdx = C.timelineEvents.findIndex(ev => ev.date >= todayStr);
+    if (activeIdx === -1 && C.timelineEvents.length > 0) {
+      activeIdx = C.timelineEvents.length - 1; // all completed, highlight the final milestone
+    }
+
+    container.innerHTML = C.timelineEvents.map((item, idx) => {
+      let state = 'timeline-future';
+      let badgeHtml = '';
+
+      if (idx < activeIdx) {
+        state = 'timeline-completed';
+      } else if (idx === activeIdx) {
+        state = 'timeline-current';
+        badgeHtml = '<span class="timeline-badge" aria-label="Current or next milestone">UP NEXT</span>';
+      }
+
+      const descHtml = item.description ? `<p class="timeline-desc">${item.description}</p>` : '';
+
+      return `
+        <div class="timeline-item ${state}" data-date="${item.date}">
+          <div class="timeline-date-col">
+            <time class="timeline-date" datetime="${item.date}">${item.displayDate}</time>
+          </div>
+          <div class="timeline-node-col" aria-hidden="true">
+            <span class="timeline-dot"></span>
+          </div>
+          <div class="timeline-content-col">
+            <div class="timeline-title-wrap">
+              <h3 class="timeline-title">${item.title}</h3>
+              ${badgeHtml}
+            </div>
+            ${descHtml}
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  renderTimeline();
 
   // Populate submission details
   const subMapping = {
-    'sub-format':      C.submission.format,
-    'sub-max':         C.submission.maxSubmissions,
-    'sub-eval':        C.submission.evaluationInstructions,
+    'sub-format':      C.submission?.format,
+    'sub-max':         C.submission?.maxSubmissions,
+    'sub-eval':        C.submission?.evaluationInstructions,
   };
   Object.entries(subMapping).forEach(([id, val]) => {
     const el = document.getElementById(id);

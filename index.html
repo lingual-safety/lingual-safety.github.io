@@ -55,9 +55,10 @@
     <!-- Desktop links -->
     <ul class="nav-links" role="list">
       <li><a href="#about"       class="nav-link" data-section-target="about">Task</a></li>
+      <li><a href="#dates"       class="nav-link" data-section-target="dates">Timeline</a></li>
+      <li><a href="#tracks"      class="nav-link" data-section-target="tracks">Tracks</a></li>
       <li><a href="#dataset"     class="nav-link" data-section-target="dataset">Dataset</a></li>
       <li><a href="#evaluation"  class="nav-link" data-section-target="evaluation">Evaluation</a></li>
-      <li><a href="#dates"       class="nav-link" data-section-target="dates">Important Dates</a></li>
       <li><a href="#submission"  class="nav-link" data-section-target="submission">Submission</a></li>
       <li><a href="#leaderboard" class="nav-link" data-section-target="leaderboard">Leaderboard</a></li>
       <li><a href="#organizers"  class="nav-link" data-section-target="organizers">Organizers</a></li>
@@ -88,9 +89,10 @@
 <!-- Mobile drawer -->
 <div id="nav-mobile" class="nav-mobile" role="menu" aria-label="Mobile navigation">
   <a href="#about"       class="nav-link" role="menuitem">Task</a>
+  <a href="#dates"       class="nav-link" role="menuitem">Timeline</a>
+  <a href="#tracks"      class="nav-link" role="menuitem">Tracks</a>
   <a href="#dataset"     class="nav-link" role="menuitem">Dataset</a>
   <a href="#evaluation"  class="nav-link" role="menuitem">Evaluation</a>
-  <a href="#dates"       class="nav-link" role="menuitem">Important Dates</a>
   <a href="#submission"  class="nav-link" role="menuitem">Submission</a>
   <a href="#leaderboard" class="nav-link" role="menuitem">Leaderboard</a>
   <a href="#organizers"  class="nav-link" role="menuitem">Organizers</a>
@@ -326,9 +328,62 @@
 
 
 <!-- ============================================================
+     IMPORTANT DATES / TIMELINE
+     ============================================================ -->
+<section id="dates" class="section" aria-labelledby="dates-title">
+  <div class="container">
+
+    <header class="section-header">
+      <span class="section-label">Schedule</span>
+      <h2 id="dates-title" class="section-title">Important Dates</h2>
+      <p class="section-subtitle">
+        Key milestones for the LingualSafety 1.0 shared task and workshop proceedings.
+      </p>
+    </header>
+
+    <!-- Academic Vertical Timeline Container -->
+    <div class="timeline-container reveal" id="timeline-container" role="region" aria-label="Event Timeline">
+      <div class="timeline-track" aria-hidden="true"></div>
+      <div class="timeline-events" id="timeline-events-list">
+        <!-- Rendered dynamically by js/main.js from CONFIG.timelineEvents -->
+        <noscript>
+          <div class="timeline-item timeline-completed">
+            <div class="timeline-date-col"><span class="timeline-date">07 Aug 2026</span></div>
+            <div class="timeline-node-col"><span class="timeline-dot"></span></div>
+            <div class="timeline-content-col"><h3 class="timeline-title">Task website goes live</h3></div>
+          </div>
+          <div class="timeline-item timeline-completed">
+            <div class="timeline-date-col"><span class="timeline-date">10 Aug 2026</span></div>
+            <div class="timeline-node-col"><span class="timeline-dot"></span></div>
+            <div class="timeline-content-col"><h3 class="timeline-title">Starter kit released</h3></div>
+          </div>
+          <div class="timeline-item timeline-completed">
+            <div class="timeline-date-col"><span class="timeline-date">20 Aug 2026</span></div>
+            <div class="timeline-node-col"><span class="timeline-dot"></span></div>
+            <div class="timeline-content-col"><h3 class="timeline-title">Training and validation data released</h3></div>
+          </div>
+          <div class="timeline-item timeline-current">
+            <div class="timeline-date-col"><span class="timeline-date">20 Sep 2026</span></div>
+            <div class="timeline-node-col"><span class="timeline-dot"></span></div>
+            <div class="timeline-content-col"><h3 class="timeline-title">Evaluation (test) set released</h3><span class="timeline-badge">UP NEXT</span></div>
+          </div>
+          <div class="timeline-item timeline-future">
+            <div class="timeline-date-col"><span class="timeline-date">01 Oct 2026</span></div>
+            <div class="timeline-node-col"><span class="timeline-dot"></span></div>
+            <div class="timeline-content-col"><h3 class="timeline-title">Final date for run submissions</h3></div>
+          </div>
+        </noscript>
+      </div>
+    </div>
+
+  </div><!-- /.container -->
+</section>
+
+
+<!-- ============================================================
      TRACKS
      ============================================================ -->
-<section id="tracks" class="section" aria-labelledby="tracks-title">
+<section id="tracks" class="section section--alt" aria-labelledby="tracks-title">
   <div class="container">
 
     <header class="section-header">
@@ -697,61 +752,6 @@
   </div><!-- /.container -->
 </section>
 
-
-<!-- ============================================================
-     IMPORTANT DATES
-     ============================================================ -->
-<section id="dates" class="section" aria-labelledby="dates-title">
-  <div class="container">
-
-    <header class="section-header">
-      <span class="section-label">Important Dates</span>
-      <h2 id="dates-title" class="section-title">Timeline</h2>
-      <p class="section-subtitle">
-        All specific dates will be announced closer to the competition.
-        Check back regularly or monitor the CodaLab page for updates.
-      </p>
-    </header>
-
-    <table class="dates-table reveal" aria-label="Competition timeline">
-      <tbody>
-        <tr>
-          <td class="dates-event">Registration Opens</td>
-          <td class="dates-date tba" id="date-registration-open">To be announced</td>
-        </tr>
-        <tr>
-          <td class="dates-event">Training Data Release</td>
-          <td class="dates-date tba" id="date-training-release">To be announced</td>
-        </tr>
-        <tr>
-          <td class="dates-event">Development Phase Starts</td>
-          <td class="dates-date tba" id="date-dev-start">To be announced</td>
-        </tr>
-        <tr>
-          <td class="dates-event">Development Phase Ends</td>
-          <td class="dates-date tba" id="date-dev-end">To be announced</td>
-        </tr>
-        <tr>
-          <td class="dates-event">Submission Deadline</td>
-          <td class="dates-date tba" id="date-submission">To be announced</td>
-        </tr>
-        <tr>
-          <td class="dates-event">Results &amp; Leaderboard Released</td>
-          <td class="dates-date tba" id="date-results">To be announced</td>
-        </tr>
-        <tr>
-          <td class="dates-event">System Description Paper Deadline</td>
-          <td class="dates-date tba" id="date-paper">To be announced</td>
-        </tr>
-        <tr>
-          <td class="dates-event">ICON 2026 - Shared Task Event</td>
-          <td class="dates-date tba" id="date-conference">To be announced - Guwahati, India</td>
-        </tr>
-      </tbody>
-    </table>
-
-  </div><!-- /.container -->
-</section>
 
 
 <!-- ============================================================

@@ -39,6 +39,7 @@ Open `js/config.js` and replace every value currently set to `"TODO"` with the r
 | `contactEmail` | Organizer contact email address |
 | `registrationURL` | Competition registration form URL |
 | `dates.*` | All competition dates (registration open, data release, submission deadline, etc.) |
+| `timelineEvents` | Array of milestone objects (`date`, `displayDate`, `title`, `description`) automatically rendered as an academic vertical timeline |
 | `submission.*` | Submission format, max submissions, evaluation instructions |
 
 ### 2. index.html - Metadata
