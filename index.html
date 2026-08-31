@@ -66,7 +66,7 @@
 
     <!-- Desktop CTA -->
     <div class="nav-cta">
-      <a href="#" data-link="codalab" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+      <a href="https://forms.gle/eCo7Xq7z8gvwVwtc7" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
         <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         Participate
       </a>
@@ -96,8 +96,8 @@
   <a href="#submission"  class="nav-link" role="menuitem">Submission</a>
   <a href="#leaderboard" class="nav-link" role="menuitem">Leaderboard</a>
   <a href="#organizers"  class="nav-link" role="menuitem">Organizers</a>
-  <a href="#" data-link="codalab" class="btn btn--primary" role="menuitem" target="_blank" rel="noopener noreferrer">
-    Participate on CodaLab
+  <a href="https://forms.gle/eCo7Xq7z8gvwVwtc7" class="btn btn--primary" role="menuitem" target="_blank" rel="noopener noreferrer">
+    Participate
   </a>
 </div>
 
@@ -136,9 +136,9 @@
           <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
           Task Description
         </a>
-        <a href="#" data-link="codabench" class="btn btn--outline btn--lg" target="_blank" rel="noopener noreferrer">
+        <a href="https://forms.gle/eCo7Xq7z8gvwVwtc7" class="btn btn--outline btn--lg" target="_blank" rel="noopener noreferrer">
           <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          Participate / CodaLab
+          Participate
         </a>
         <a href="#" data-link="github" class="btn btn--ghost btn--lg" target="_blank" rel="noopener noreferrer">
           <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
@@ -201,62 +201,23 @@
 
     <header class="section-header">
       <span class="section-label">About the Shared Task</span>
-      <h2 id="about-title" class="section-title">Why LingualSafety 1.0?</h2>
-      <p class="section-subtitle">
-        Addressing a critical gap in multilingual AI safety research for
-        Indian-language LLM deployments.
-      </p>
+      <h2 id="about-title" class="section-title">About the Shared Task</h2>
     </header>
 
-    <div class="about-grid">
-      <!-- Prose -->
-      <div class="about-prose reveal">
-        <p>
-          Large Language Models are increasingly deployed across India in domains
-          such as education, healthcare, finance, and public services. Users interact
-          with these systems in both English and Indian languages - yet most existing
-          jailbreak benchmarks and safety mechanisms primarily focus on English.
-        </p>
-        <p>
-          Differences in scripts, linguistic structures, and safety-alignment resources
-          may lead to inconsistent protection across languages. This is particularly
-          concerning in India, where LLM-based systems must serve linguistically
-          diverse users.
-        </p>
-        <p>
-          <strong>LingualSafety 1.0</strong> introduces a standardised multilingual
-          jailbreak benchmark covering English, Hindi, Bengali, Marathi, and Punjabi,
-          with over 18,235 prompts evaluated under two distinct attack settings. The
-          goal is to encourage the development of robust defence mechanisms that prevent
-          unsafe response generation while preserving responses to benign requests.
-        </p>
-        <p>
-          The task is intended to determine whether defence mechanisms that handle
-          direct harmful requests also generalise to strategically framed jailbreak
-          attacks - a critical open question in multilingual AI safety.
-        </p>
-      </div>
-
-      <!-- Highlights -->
-      <div class="about-highlights reveal">
-        <div class="highlight-card">
-          <h3>The Problem</h3>
-          <p>No standardised benchmark exists for evaluating jailbreak attacks across multiple Indian languages, leaving critical safety gaps in LLM deployments.</p>
-        </div>
-        <div class="highlight-card">
-          <h3>The Solution</h3>
-          <p>A multilingual benchmark spanning five languages with two attack settings - plain harmful prompts and persuasion-based jailbreak prompts.</p>
-        </div>
-        <div class="highlight-card">
-          <h3>The Event</h3>
-          <p>A half-day shared-task workshop at ICON 2026, Guwahati, India, bringing together NLP researchers to advance multilingual AI safety.</p>
-        </div>
-        <div class="highlight-card">
-          <h3>Two Tracks</h3>
-          <p>A Closed Track (task-provided resources only) and an Open Track (additional public resources allowed), enabling fair comparison across approaches.</p>
-        </div>
-      </div>
-    </div><!-- /.about-grid -->
+    <div class="about-prose reveal" style="max-width:800px;margin:0 auto;">
+      <p>
+        <strong>LingualSafety 1.0</strong> introduces a standardised multilingual
+        jailbreak benchmark covering English, Hindi, Bengali, Marathi, and Punjabi,
+        with over 18,235 prompts evaluated under two distinct attack settings. The
+        goal is to encourage the development of robust defence mechanisms that prevent
+        unsafe response generation while preserving responses to benign requests.
+      </p>
+      <p>
+        The task is intended to determine whether defence mechanisms that handle
+        direct harmful requests also generalise to strategically framed jailbreak
+        attacks - a critical open question in multilingual AI safety.
+      </p>
+    </div>
 
   </div><!-- /.container -->
 </section>
@@ -348,27 +309,27 @@
         <!-- Rendered dynamically by js/main.js from CONFIG.timelineEvents -->
         <noscript>
           <div class="timeline-item timeline-completed">
-            <div class="timeline-date-col"><span class="timeline-date">07 Aug 2026</span></div>
+            <div class="timeline-date-col"><span class="timeline-date">30 Aug 2026</span></div>
             <div class="timeline-node-col"><span class="timeline-dot"></span></div>
             <div class="timeline-content-col"><h3 class="timeline-title">Task website goes live</h3></div>
           </div>
           <div class="timeline-item timeline-completed">
-            <div class="timeline-date-col"><span class="timeline-date">10 Aug 2026</span></div>
+            <div class="timeline-date-col"><span class="timeline-date">04 Sep 2026</span></div>
             <div class="timeline-node-col"><span class="timeline-dot"></span></div>
             <div class="timeline-content-col"><h3 class="timeline-title">Starter kit released</h3></div>
           </div>
           <div class="timeline-item timeline-completed">
-            <div class="timeline-date-col"><span class="timeline-date">20 Aug 2026</span></div>
+            <div class="timeline-date-col"><span class="timeline-date">10 Sep 2026</span></div>
             <div class="timeline-node-col"><span class="timeline-dot"></span></div>
             <div class="timeline-content-col"><h3 class="timeline-title">Training and validation data released</h3></div>
           </div>
           <div class="timeline-item timeline-current">
-            <div class="timeline-date-col"><span class="timeline-date">20 Sep 2026</span></div>
+            <div class="timeline-date-col"><span class="timeline-date">15 Sep 2026</span></div>
             <div class="timeline-node-col"><span class="timeline-dot"></span></div>
             <div class="timeline-content-col"><h3 class="timeline-title">Evaluation (test) set released</h3><span class="timeline-badge">UP NEXT</span></div>
           </div>
           <div class="timeline-item timeline-future">
-            <div class="timeline-date-col"><span class="timeline-date">01 Oct 2026</span></div>
+            <div class="timeline-date-col"><span class="timeline-date">25 Sep 2026</span></div>
             <div class="timeline-node-col"><span class="timeline-dot"></span></div>
             <div class="timeline-content-col"><h3 class="timeline-title">Final date for run submissions</h3></div>
           </div>
@@ -905,20 +866,36 @@
       <h2 id="organizers-title" class="section-title">Organizing Team</h2>
     </header>
 
-    <div class="organizers-list reveal">
-      <div class="organizer-row">
+    <div class="organizers-grid-2col reveal">
+      <div class="organizer-card-2col">
         <span class="organizer-row-name">Mamta</span>
         <span class="organizer-row-affiliation">Postdoctoral Research Associate, King's College London</span>
       </div>
-      <div class="organizer-row">
+      <div class="organizer-card-2col">
         <span class="organizer-row-name">Deeksha Varshney</span>
         <span class="organizer-row-affiliation">Assistant Professor, IIT Jodhpur</span>
       </div>
-      <div class="organizer-row">
+      <div class="organizer-card-2col">
         <span class="organizer-row-name">Asif Ekbal</span>
         <span class="organizer-row-affiliation">Associate Professor, IIT Patna</span>
       </div>
-    </div><!-- /.organizers-list -->
+      <div class="organizer-card-2col">
+        <span class="organizer-row-name">Mihir Mashruwala</span>
+        <span class="organizer-row-affiliation">Research Intern, D. J. Sanghvi</span>
+      </div>
+      <div class="organizer-card-2col">
+        <span class="organizer-row-name">Smeet</span>
+        <span class="organizer-row-affiliation">Research Intern, D. J. Sanghvi</span>
+      </div>
+      <div class="organizer-card-2col">
+        <span class="organizer-row-name">Saikat Mondal</span>
+        <span class="organizer-row-affiliation">PhD Student, IIT Jodhpur</span>
+      </div>
+      <div class="organizer-card-2col">
+        <span class="organizer-row-name">Lokesh Sahuji</span>
+        <span class="organizer-row-affiliation">Research Intern, D. J. Sanghvi</span>
+      </div>
+    </div><!-- /.organizers-grid-2col -->
 
   </div><!-- /.container -->
 </section>

@@ -1352,6 +1352,35 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--clr-text-3);
 }
 
+/* -- Organizers 2-column grid */
+.organizers-grid-2col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--clr-border);
+  max-width: 800px;
+  margin: 0 auto;
+}
+.organizer-card-2col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--clr-border);
+  border-right: 1px solid var(--clr-border);
+}
+.organizer-card-2col:nth-child(even) {
+  border-right: none;
+}
+@media (max-width: 600px) {
+  .organizers-grid-2col {
+    grid-template-columns: 1fr;
+  }
+  .organizer-card-2col {
+    border-right: none;
+  }
+}
+
 /* -- Conference section */
 .conference-card {
   padding: var(--space-2xl) var(--space-3xl);
