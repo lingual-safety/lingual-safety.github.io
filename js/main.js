@@ -22,14 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  setLinks('[data-link="codalab"]', C.codalabURL || C.codabenchURL, 'CodaLab');
-  setLinks('[data-link="codabench"]', C.codalabURL || C.codabenchURL, 'CodaLab');
-  setLinks('[data-link="github"]', C.githubURL, 'GitHub');
+  setLinks('[data-link="Codabench"]', C.CodabenchURL || C.codabenchURL, 'Codabench');
+  setLinks('[data-link="codabench"]', C.CodabenchURL || C.codabenchURL, 'Codabench');
+  setLinks('[data-link="participate"]', C.registrationURL, 'Participate');
   setLinks('[data-link="baseline"]', C.baselineURL, 'Baseline');
   setLinks('[data-link="dataset"]', C.datasetURL, 'Dataset');
   setLinks('[data-link="icon"]', C.iconConferenceURL, 'ICON 2026');
-  setLinks('[data-link="contact"]', C.contactEmail ? `mailto:${C.contactEmail}` : '#', 'Contact');
-  setLinks('[data-link="registration"]', C.registrationURL, 'Registration');
 
   // Populate timeline dynamically from CONFIG.timelineEvents
   function renderTimeline() {

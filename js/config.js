@@ -17,14 +17,12 @@ const CONFIG = {
   conferenceLocation: "Guwahati, India",
 
   // External links
-  codalabURL: "https://www.codabench.org/competitions/17783/",
-  codabenchURL: "https://www.codabench.org/competitions/17783/",
-  githubURL: "TODO",
+  CodabenchURL: "https://www.codabench.org/competitions/17942/",
+  codabenchURL: "https://www.codabench.org/competitions/17942/",
   baselineURL: "TODO",
   datasetURL: "TODO",
-  iconConferenceURL: "TODO",
-  contactEmail: "TODO",
-  registrationURL: "TODO",
+  iconConferenceURL: "https://www.icon2026.org/",
+  registrationURL: "https://docs.google.com/forms/d/e/1FAIpQLSdGrRQd1OH_phWQm1jHBskUXns8_TxpHEzz8VyNl6WidJW2Aw/viewform",
 
   // Important dates & Timeline Events
   // The website automatically calculates event status (completed, current/upcoming, future)
