@@ -410,7 +410,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* -- Stats section */
 #stats {
   padding: var(--space-3xl) 0;
-  background: var(--clr-bg-alt);
+  background: var(--clr-bg);
   border-top: 1px solid var(--clr-border);
   border-bottom: 1px solid var(--clr-border);
 }
@@ -841,62 +841,46 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-style: italic;
 }
 
-/* -- Models / Resources */
+/* -- Models / Resources (Button Cards) */
 .models-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
 }
-.model-card {
-  padding: var(--space-xl);
+.model-btn-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
   background: var(--clr-surface);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-xl);
+  text-decoration: none;
+  transition: all var(--transition);
 }
-.model-card:hover {
+.model-btn-card:hover {
   border-color: var(--clr-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
 }
-.model-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: var(--space-md);
-}
-.model-icon {
-  width: 40px; height: 40px;
-  border-radius: var(--radius-lg);
-  background: var(--clr-bg-alt);
-  border: 1px solid var(--clr-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-}
-.model-link-icon { color: var(--clr-text-4); }
-.model-card:hover .model-link-icon { color: var(--clr-primary); }
-.model-name {
+.model-btn-name {
   font-size: 1rem;
   font-weight: 700;
   color: var(--clr-text-1);
   font-family: var(--font-mono);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
+  transition: color var(--transition);
 }
-.model-org {
-  font-size: 0.8125rem;
-  color: var(--clr-text-3);
-  margin-bottom: var(--space-md);
-}
-.model-hf-link {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xs);
-  font-size: 0.8125rem;
-  font-weight: 500;
+.model-btn-card:hover .model-btn-name {
   color: var(--clr-primary);
-  padding: 4px 10px;
-  background: var(--clr-primary-glow);
-  border: 1px solid rgba(0,86,179,0.15);
-  border-radius: var(--radius-pill);
+}
+.model-btn-org {
+  font-size: 0.8125rem;
+  color: var(--clr-primary);
+  font-weight: 500;
 }
 .model-hf-link:hover {
   background: rgba(0,86,179,0.15);
@@ -1537,40 +1521,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: var(--space-lg);
 }
 
-/* -- Models plain list */
-.models-list {
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid var(--clr-border);
-  max-width: 700px;
-  margin: 0 auto;
-}
-.model-list-row {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--space-lg);
-  padding: var(--space-md) 0;
-  border-bottom: 1px solid var(--clr-border);
-  text-decoration: none;
-  color: inherit;
-}
-.model-list-row:hover .model-list-name {
-  color: var(--clr-primary);
-  text-decoration: underline;
-}
-.model-list-name {
-  font-size: 0.9375rem;
-  font-weight: 600;
-  color: var(--clr-text-1);
-  font-family: var(--font-mono);
-  transition: color var(--transition);
-}
-.model-list-org {
-  font-size: 0.875rem;
-  color: var(--clr-text-4);
-  font-style: italic;
-}
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1676,11 +1626,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     text-align: left;
     font-size: 0.8125rem;
   }
-  .model-list-row {
-    flex-direction: column;
-    gap: 2px;
-    align-items: flex-start;
-  }
 }
 
 /* -- Intersection observer reveal */
@@ -1708,4 +1653,35 @@ code {
   background: rgba(0,86,179,0.05);
   padding: 1px 5px;
   border-radius: 3px;
+}
+
+#about .section-header {
+  margin-bottom: 0;
+}
+
+#about .section-label {
+  margin-bottom: 0.5rem;
+}
+
+#about .about-prose {
+  margin-top: 0 !important;
+}
+
+.organizers-plain {
+  max-width: 100%;
+}
+
+.organizers-plain p {
+  margin: 0 0 0.75rem 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--clr-text-2);
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.organizers-plain p:last-child {
+  margin-bottom: 0;
 }
