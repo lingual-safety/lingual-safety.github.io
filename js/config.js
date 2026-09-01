@@ -19,7 +19,8 @@ const CONFIG = {
   // External links
   CodabenchURL: "https://www.codabench.org/competitions/17942/",
   codabenchURL: "https://www.codabench.org/competitions/17942/",
-  baselineURL: "TODO",
+  starterKitURL: "https://github.com/araieval/ArGuard-2026-tasks/tree/main/",
+  baselineURL: "https://github.com/araieval/ArGuard-2026-tasks/tree/main/",
   datasetURL: "TODO",
   iconConferenceURL: "https://www.icon2026.org/",
   registrationURL: "https://docs.google.com/forms/d/e/1FAIpQLSdGrRQd1OH_phWQm1jHBskUXns8_TxpHEzz8VyNl6WidJW2Aw/viewform",

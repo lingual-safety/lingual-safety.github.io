@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setLinks('[data-link="Codabench"]', C.CodabenchURL || C.codabenchURL, 'Codabench');
   setLinks('[data-link="codabench"]', C.CodabenchURL || C.codabenchURL, 'Codabench');
+  setLinks('[data-link="starter-kit"]', C.starterKitURL || C.baselineURL, 'Starter kit');
   setLinks('[data-link="participate"]', C.registrationURL, 'Participate');
   setLinks('[data-link="baseline"]', C.baselineURL, 'Baseline');
   setLinks('[data-link="dataset"]', C.datasetURL, 'Dataset');
