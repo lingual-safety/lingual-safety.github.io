@@ -744,7 +744,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin-bottom: var(--space-lg);
 }
 .metric-formula {
-  display: block;
+  display: flex;
+  align-items: center;
   background: var(--clr-bg-alt);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-md);
@@ -754,8 +755,28 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--clr-text-2);
   line-height: 1.6;
   margin-bottom: var(--space-md);
-  white-space: pre-wrap;
-  word-break: break-word;
+  min-height: 120px;
+}
+
+.formula-line {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.formula-fraction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.fraction-line {
+  width: 100%;
+  border-top: 1px solid currentColor;
+  margin: 0.25rem 0;
 }
 .metric-card p {
   font-size: 0.875rem;
