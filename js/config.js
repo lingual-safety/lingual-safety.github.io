@@ -19,12 +19,13 @@ const CONFIG = {
   // External links
   CodabenchURL: "https://www.codabench.org/competitions/17942/",
   codabenchURL: "https://www.codabench.org/competitions/17942/",
-  starterKitURL: "https://github.com/araieval/ArGuard-2026-tasks/tree/main/",
-  baselineURL: "https://github.com/araieval/ArGuard-2026-tasks/tree/main/",
+  starterKitURL: "https://github.com/MonSaikat/IndicSafeEval",
+  baselineURL: "https://github.com/MonSaikat/IndicSafeEval",
   datasetURL: "TODO",
   iconConferenceURL: "https://www.icon2026.org/",
   registrationURL: "https://docs.google.com/forms/d/e/1FAIpQLSdGrRQd1OH_phWQm1jHBskUXns8_TxpHEzz8VyNl6WidJW2Aw/viewform",
 
+  
   // Important dates & Timeline Events
   // The website automatically calculates event status (completed, current/upcoming, future)
   // based on today's date. The vertical timeline bar remains stationary.
@@ -32,57 +33,57 @@ const CONFIG = {
     {
       date: "2026-08-31",
       displayDate: "31 Aug 2026",
-      title: "Task website goes live",
+      title: "Shared task website goes live",
       description: "Official release of the LingualSafety 1.0 task website and documentation."
+    },
+    {
+      date: "2026-09-02",
+      displayDate: "02 Sep 2026",
+      title: "Registration Starts",
+      description: "Registration for the LingualSafety 1.0 shared task is now open."
     },
     {
       date: "2026-09-04",
       displayDate: "04 Sep 2026",
-      title: "Starter kit released",
-      description: "Baseline scripts, validation tools, and submission templates available."
+      title: "Data released (registered participants only)",
+      description: "Release of Data to the registered participants"
     },
     {
-      date: "2026-09-10",
-      displayDate: "10 Sep 2026",
-      title: "Training and validation data released",
-      description: "Release of multilingual prompts and dataset splits for training and dev."
-    },
-    {
-      date: "2026-09-15",
-      displayDate: "15 Sep 2026",
+      date: "2026-10-12",
+      displayDate: "12 Oct 2026",
       title: "Evaluation (test) set released",
       description: "Evaluation phase opens on the competition platform."
     },
     {
-      date: "2026-09-25",
-      displayDate: "25 Sep 2026",
+      date: "2026-10-25",
+      displayDate: "25 Oct 2026",
       title: "Final date for run submissions",
       description: "Submission deadline for final model outputs and defences."
     },
     {
-      date: "2026-09-26",
-      displayDate: "26 Sep 2026",
+      date: "2026-10-25",
+      displayDate: "25 Oct 2026",
       title: "Task results and rankings published",
       description: "Official leaderboard rankings and evaluation metrics announced."
     },
-    // {
-    //   date: "2026-10-25",
-    //   displayDate: "25 Oct 2026",
-    //   title: "Participant system papers due",
-    //   description: "Deadline for system description papers detailing defence methodologies."
-    // },
-    // {
-    //   date: "2026-11-25",
-    //   displayDate: "25 Nov 2026",
-    //   title: "Acceptance decisions communicated",
-    //   description: "Notification of acceptance for workshop presentations and proceedings."
-    // },
-    // {
-    //   date: "2026-12-10",
-    //   displayDate: "10 Dec 2026",
-    //   title: "Camera-ready working notes",
-    //   description: "Final camera-ready papers submitted for ICON 2026 proceedings."
-    // }
+    {
+      date: "2026-11-10",
+      displayDate: "10 Nov 2026",
+      title: "Participants system papers due",
+      description: "Deadline for system description papers detailing defence methodologies."
+    },
+    {
+      date: "2026-11-22",
+      displayDate: "22 Nov 2026",
+      title: "Acceptance decisions communicated",
+      description: "Notification of acceptance for workshop presentations and proceedings."
+    },
+    {
+      date: "2026-11-30",
+      displayDate: "30 Nov 2026",
+      title: "Camera-ready submissions",
+      description: "Final camera-ready papers submitted for ICON 2026 proceedings."
+    }
   ],
 
   dates: {
