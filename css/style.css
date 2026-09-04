@@ -1632,6 +1632,23 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .dates-table { width: 100%; }
   .dates-event { width: 55%; font-size: 0.875rem; }
   .dates-date { font-size: 0.8125rem; }
+  .metrics-grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-lg);
+  }
+
+  .metric-card {
+    flex: 1 1 100%;
+    max-width: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .metric-formula {width: 100%;box-sizing: border-box;}
+  .formula-line {gap: 0.5rem;}
+  .formula-fraction { min-width: 0; }
+  .formula-fraction span { overflow-wrap: break-word; }
 }
 
 @media (max-width: 480px) {

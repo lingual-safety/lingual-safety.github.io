@@ -510,7 +510,7 @@
       <span class="section-label">Evaluation</span>
       <h2 id="objective-title" class="section-title" style="font-size:clamp(1.35rem, 3vw, 1.75rem);">How Systems Are Evaluated</h2>
       <p class="section-subtitle">
-        Organizers run the full evaluation pipeline on a hidden test set.
+        Organizers run the full evaluation pipeline on a test set.
       </p>
     
 
@@ -518,19 +518,12 @@
     <div class="about-prose reveal" style="margin-top:var(--space-lg);margin-bottom:var(--space-2xl);">
         <p>
           Participants submit their defence systems to the competition platform.
-          The submitted systems are then <strong>integrated with an
-          organizer-provided base LLM</strong> during the evaluation phase.
         </p>
         <p>
           The organizers execute all submitted systems on a
-          <strong>hidden test set</strong>, generate model responses, and compute
+          <strong>test set</strong>, generate model responses, and compute
           official evaluation metrics using a standardised evaluation pipeline.
           This ensures that all systems are compared under identical conditions.
-        </p>
-        <p>
-          The hidden test set contains both <strong>plain harmful prompts</strong>
-          and <strong>persuasion-based multilingual jailbreak prompts</strong>
-          across all five benchmark languages.
         </p>
         <p>
           Each model prompt-response pair is assigned a score on a
