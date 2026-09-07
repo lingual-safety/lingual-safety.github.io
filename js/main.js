@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setLinks('[data-link="baseline"]', C.baselineURL, 'Baseline');
   setLinks('[data-link="dataset"]', C.datasetURL, 'Dataset');
   setLinks('[data-link="icon"]', C.iconConferenceURL, 'ICON 2026');
+  setLinks('[data-link="paper"]', C.paperURL, 'Paper');
+  
 
   // Populate timeline dynamically from CONFIG.timelineEvents
   function renderTimeline() {

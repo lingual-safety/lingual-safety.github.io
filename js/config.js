@@ -24,6 +24,7 @@ const CONFIG = {
   datasetURL: "TODO",
   iconConferenceURL: "https://www.icon2026.org/",
   registrationURL: "https://docs.google.com/forms/d/e/1FAIpQLSdGrRQd1OH_phWQm1jHBskUXns8_TxpHEzz8VyNl6WidJW2Aw/viewform",
+  paperURL: "https://arxiv.org/abs/2609.03781",
 
   
   // Important dates & Timeline Events
